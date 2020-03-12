@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> (주)예원 M&amp;D </title>
-
     <!--favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="http://yw-mnd.com/plugin/openGN5/img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="http://yw-mnd.com/plugin/openGN5/img/favicon/apple-icon-60x60.png">
@@ -27,15 +25,17 @@
     <meta name="theme-color" content="#ffffff">
     <!-- jquery cdn -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <!-- swiper cdn -->
-    <link rel="stylesheet" href="css/swiper.min.css">
     <!-- 폰트어썸 -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- 부트스트랩 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- stylesheet -->
     <link rel="stylesheet" href="css/import.css">
-    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <!-- js -->
+    <script src="js/swiper.min.js"></script>
+    <script src="script/script.js"></script>
+
 </head>
 
 <body>
@@ -43,11 +43,11 @@
         <header>
             <h1><img src="../yw_template/images/logo_img.png" alt="yw_template logo"></h1>
             <nav>
-                <div class="M_menu">
+                <div class="nav_wrap">
                     <input class="menu-btn" type="checkbox" id="menu-btn">
                     <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
                     
-                    <ul class="PC_menu">
+                    <ul class="nav_menu">
                         <li><a href="#">회사소개</a></li>
                         <li><a href="#">사업분야</a></li>
                         <li><a href="#">리커버샵</a></li>
@@ -60,44 +60,59 @@
                 </div>
             </nav>
         </header>
-    
-         <!-- main_slide { -->
-            <div class="main-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="#"><img src="images/main_banner1.jpg" alt="main banner1"></a>
+    <!-- main_slide { -->
+			<div class="main_slide">
+				<div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src = "images/main_banner1.jpg" alt="main banner1"></div>
+                        <div class="swiper-slide"><img src = "images/main_banner2.jpg" alt="main banner2"></div>
+                        <div class="swiper-slide"><img src = "images/main_banner3.jpg" alt="main banner3"></div>
                     </div>
-                    <div class="swiper-slide">
-                        <a href="#"><img src="images/main_banner2.jpg" alt="main banner2"></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#"><img src="images/main_banner3.jpg" alt="main banner3"></a>
-                    </div>
-                
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-        <!-- main_slide { -->
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
 
-        <div class="contents">
+                    <!-- Add Pagination -->
+					<div class="swiper-pagination"></div>
+					
+					<script>
+						var swiper = new Swiper('.swiper-container', {
+							navigation: {
+								nextEl: '.swiper-button-next',
+								prevEl: '.swiper-button-prev',
+							},
+							pagination: {
+								el: '.swiper-pagination',
+							},
+							autoplay: {
+								delay: 3000,
+							},
+							loop: true,
+							autoplayDisableOnInteraction: false,
+							paginationClickable: true
+						});
+					</script>
+				</div>
+			</div>
+            <!-- main_slide { -->
+
+        <div class="content dw_1200px">
 
             <section class="B_Area">
 
                 <div class="B_wrap">
                     <h2>Business</h2>
-                    <div><a href="#"><img src="images/company.jpg" alt="company banner"></a></div>
-                    <div><a href="#"><img src="images/business.jpg" alt="business banner"></a></div>
+                    <ul>
+                        <li><a href="#"><img src="images/company.jpg" alt="company banner"></a></li>
+                        <li><a href="#"><img src="images/business.jpg" alt="business banner"></a></li>
+                    </ul>
                 </div>
 
             </section>
         
             <section class="P_Area">
-
+                <h2>Product</h2>
                 <div class="P_wrap">
-                    <h2>Product</h2>
-
                     <div class="P_mom">
                         <a href="#"><img src="images/moms_meat.png" alt="Product banner1"></a>
                         <div class="P_btn">
@@ -133,10 +148,10 @@
                     <p>(주)예원 M&amp;D는 다양한 제조 &amp; 유통 사업분야에 진출하여 성장하고 있습니다.</p>
                 </div>
 
-                <div><img src="images/About_banner1.png" alt="About_banner1"></div>
-                <div><img src="images/About_banner2.png" alt="About_banner2"></div>
-                <div><img src="images/About_banner3.png" alt="About_banner3"></div>
-                <div><img src="images/About_banner4.png" alt="About_banner4"></div>
+                <div class="col-xs-6 col-md-3"><img src="images/About_banner1.png" alt="About_banner1"></div>
+                <div class="col-xs-6 col-md-3"><img src="images/About_banner2.png" alt="About_banner2"></div>
+                <div class="col-xs-6 col-md-3"><img src="images/About_banner3.png" alt="About_banner3"></div>
+                <div class="col-xs-6 col-md-3"><img src="images/About_banner4.png" alt="About_banner4"></div>
 
             </section>
 
@@ -178,7 +193,7 @@
 
         <footer>
 
-            <div class="ft_wrap">
+            <div class="ft_wrap dw_1200px">
                 <div class="f_top">
                     <ul>
                         <li>회사소개</li>
@@ -221,8 +236,7 @@
         </aside>
    
 </div>
-    <!-- JS -->
-    <script src="script/script.js"></script>
+
 </body>
 
 </html>
