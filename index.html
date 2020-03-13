@@ -40,26 +40,30 @@
 
 <body>
     <div class="wrap">
-        <header>
-            <h1><img src="../yw_template/images/logo_img.png" alt="yw_template logo"></h1>
-            <nav>
-                <div class="nav_wrap">
-                    <input class="menu-btn" type="checkbox" id="menu-btn">
-                    <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
-                    
-                    <ul class="nav_menu">
-                        <li><a href="#">회사소개</a></li>
-                        <li><a href="#">사업분야</a></li>
-                        <li><a href="#">리커버샵</a></li>
-                        <li><a href="#">맘스육포</a></li>
-                        <li><a href="#">렌탈사업</a></li>
-                        <li><a href="#">오시는 길</a></li>
-                        <li><a href="#"><i class="fas fa-map-marker-alt"></i></a></li>
-                    </ul>
-                    <label class="BG" for="menu-btn"></label>
-                </div>
-            </nav>
-        </header>
+        <div class="h_wrap">
+            <header>
+                <h1><a href="#"><img src="../yw_template/images/logo_img.png" alt="yw_template logo"></a></h1>
+                <nav>
+                    <div class="menubar">
+                        <input class="menu-btn" type="checkbox" id="menu-btn">
+                        <label class="menu-icon" for="menu-btn">
+                            <span class="nav-icon"></span>
+                        </label>
+
+                        <ul class="nav_menu">
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">사업분야</a></li>
+                            <li><a href="#">리커버샵</a></li>
+                            <li><a href="#">맘스육포</a></li>
+                            <li><a href="#">렌탈사업</a></li>
+                            <li><a href="#">오시는 길</a></li>
+                            <li><a href="#"><i class="fas fa-map-marker-alt"></i></a></li>
+                        </ul>
+                        <label class="BG" for="menu-btn"></label>
+                    </div>
+                </nav>
+            </header>
+        </div>
     <!-- main_slide { -->
 			<div class="main_slide">
 				<div class="swiper-container">
@@ -110,30 +114,37 @@
 
             </section>
         
-            <section class="P_Area">
+            <section class="P_Area m_bottom m_bottom">
                 <h2>Product</h2>
                 <div class="P_wrap">
                     <div class="P_mom">
                         <a href="#"><img src="images/moms_meat.png" alt="Product banner1"></a>
                         <div class="P_btn">
-                            <p>view</p>
-                            <i class="fas fa-plus"></i>
+                            <div>
+                                <p>view</p>
+                                <i class="fas fa-plus"></i>
+                            </div>
+
                         </div>
                     </div>
 
                     <div class="P_recover">
                         <a href="#"><img src="images/DR_mari.png" alt="Product banner2"></a>
                         <div class="P_btn">
-                            <p>view</p>
-                            <i class="fas fa-plus"></i>
+                            <div>
+                                <p>view</p>
+                                <i class="fas fa-plus"></i>
+                            </div>
                         </div>
                     </div>
 
                     <div class="P_dr">
                         <a href="#"><img src="images/recoverbanner.png" alt="Product banner3"></a>
                         <div class="P_btn">
-                            <p>view</p>
-                            <i class="fas fa-plus"></i>
+                            <div>
+                                <p>view</p>
+                                <i class="fas fa-plus"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -148,10 +159,10 @@
                     <p>(주)예원 M&amp;D는 다양한 제조 &amp; 유통 사업분야에 진출하여 성장하고 있습니다.</p>
                 </div>
 
-                <div class="col-xs-6 col-md-3"><img src="images/About_banner1.png" alt="About_banner1"></div>
-                <div class="col-xs-6 col-md-3"><img src="images/About_banner2.png" alt="About_banner2"></div>
-                <div class="col-xs-6 col-md-3"><img src="images/About_banner3.png" alt="About_banner3"></div>
-                <div class="col-xs-6 col-md-3"><img src="images/About_banner4.png" alt="About_banner4"></div>
+                <div class="col-xs-12 col-sm-6 col-md-3 m_bottom"><img src="images/About_banner1.png" alt="About_banner1"></div>
+                <div class="col-xs-12 col-sm-6 col-md-3 m_bottom"><img src="images/About_banner2.png" alt="About_banner2"></div>
+                <div class="col-xs-12 col-sm-6 col-md-3 m_bottom"><img src="images/About_banner3.png" alt="About_banner3"></div>
+                <div class="col-xs-12 col-sm-6 col-md-3 m_bottom"><img src="images/About_banner4.png" alt="About_banner4"></div>
 
             </section>
 
@@ -160,31 +171,34 @@
                     <div class="N_contents">
                         <ul>
                             <li>
+                               <img src="images/notice.png" alt="notice_icon">
                                <p>Notice</p>
                                <p>(주)예원 M&amp;D 공지사항을</p>
                                <p>알려드립니다.</p>
-                               <div><p>바로가기</p></div>
+                               <div class="go_btn"><p>바로가기</p></div>
                             </li>
 
-                            <li><img src="images/notice.png" alt="notice_icon"></li>
+                            <!-- <li><img src="images/notice.png" alt="notice_icon"></li> -->
 
                             <li>
+                                <img src="images/mail.png" alt="mail_icon">
                                 <p>Contact us</p>
                                 <p>(주)예원 M&amp;D에 문의사항을 남겨주시면</p>
                                 <p>메일로 답변드립니다.</p>
-                                <div><p>바로가기</p></div>
+                                <div class="go_btn"><p>바로가기</p></div>
                              </li>
 
-                             <li><img src="images/mail.png" alt="mail_icon"></li>
+                             <!-- <li><img src="images/mail.png" alt="mail_icon"></li> -->
 
                              <li>
+                                <img src="images/map.png" alt="map_icon">
                                 <p>Location</p>
                                 <p>(주)예원 M&amp;D의 오시는길을</p>
                                 <p>안내해드립니다.</p>
-                                <div><p>바로가기</p></div>
+                                <div class="go_btn"><p>바로가기</p></div>
                              </li>      
 
-                             <li><img src="images/map.png" alt="map_icon"></li>
+                             <!-- <li><img src="images/map.png" alt="map_icon"></li> -->
                         </ul>
                     </div>
                 </div>
@@ -231,8 +245,11 @@
 
         </footer>
        
-        <aside>
-            <div class="top_btn">Top</div>
+        <aside class="cursor_pointer">
+            <div class="aside_wrap">
+                <div class="top_btn">Top</div>
+            </div>
+
         </aside>
    
 </div>

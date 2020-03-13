@@ -2,13 +2,22 @@ $( document ).ready( function() {
 
     var menuOffset = $( 'header' ).offset();
 
-    $( window ).scroll( function() {
-      if ( $( document ).scrollTop() > menuOffset.top ) {
-        $( 'header nav' ).addClass( '.nav_fix' );
-      }
-      else {
-        $( 'header nav' ).removeClass( '.nav_fix' );
-      }
+    $(function () {
+
+      $(window).scroll(function () {
+          console.log($(this).scrollTop());
+          if ($(this).scrollTop() >= $('header').height()) {
+              $('header .h_wrap').addClass('nav_fix');
+          } else {
+              $('header .h_wrap').removeClass('nav_fix');
+          }
+      });
+  });
+
+    $("aside").click(function () {
+        $('html').animate({
+            scrollTop: 0
+        }, 500);
     });
     
   });
