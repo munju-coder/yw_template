@@ -27,8 +27,10 @@ align-items: center;
 :root {
 --swiper-theme-color:#ffffff;
 }
-a { color:#000; text-decoration:none !important;  }
-a:active, a:visited {text-decoration:none;}
+a,a:active, a:visited,a:hover, a:link, a:focus
+ {text-decoration:none; color:#000; }
+
+a, 
 ul {list-style:none;}
 ul, li, p { margin: 0; padding: 0; }
 table { width:100%; /* border: 1px solid #9e9e9e; */ border-collapse: collapse;}
@@ -37,7 +39,16 @@ table th, td {/* border: 1px solid #9e9e9e; */padding: 7px; color:#333;}
 .dw_1200px { width: 100%; max-width: 1200px; margin: 0 auto; text-align: center; }
 .dw_100p { width: 100%; margin: 0 auto; text-align: center; }
 section h2 { font-size: 32px; margin: 4% 0; font-weight: 600; }
-.nav_fix { position: fixed; width: 100%; top: 0; }
+/* .nav_fix { position: fixed; width: 100%; top: 0; left:0; } */
+
+.nav_fix {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    margin-top: 1%;
+    background-color: white;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+}
 .P_btn 
 { width: 100px; margin: 0 auto; background-color: #dddddd; margin-top: 20px; padding: 10px; background-color: rgb(243, 152, 0); border: 3px solid #f1c5ac;}    
 .P_btn::after { content: ' '; overflow: hidden; display: block; clear: both; }
@@ -64,16 +75,16 @@ section h2 { font-size: 32px; margin: 4% 0; font-weight: 600; }
 .swiper-container .swiper-pagination-bullet.swiper-pagination-bullet-active { background-color: white; }
 
 /*header*/
-.wrap header { width: 100%; max-width: 1200px; margin: 0 auto; position: relative; }
-.wrap header h1 { width: 100%; max-width: 1200px; margin: 0 auto; margin-top: 2%; margin-bottom: 1%; }
-
-.wrap header nav { position: absolute; right: 0; top: 57%; max-width: 600px; width: 100%; }   
-.wrap header .h_wrap { width:100%; box-shadow: 0 10px 10px rgba(0, 0, 0, .2); z-index: 100;}
-
-
+.wrap .h_wrap { position: relative;}
+.wrap header { width: 100%;  margin: 0 auto;  z-index: 500;  }
+.wrap header h1 { width: 100%; margin: 0 auto; margin-top: 1%; margin-bottom: 1%; max-width: 1200px; }
+.wrap header h1 img { width: 14%; }
+.wrap header nav { position: absolute; right: 2%; top: 60%; max-width: 600px; width: 100%; }   
 .wrap header .menubar .nav_menu li { float: left; margin-right: 30px; font-size: 18px; }
 .wrap header .menubar .nav_menu::after { content: ''; overflow: hidden; clear: both; display: block; }
 .wrap header .menubar > label, header .menubar > input ,header .menubar .nav_menu li i { display: none; }
+
+
 
 /* aside */
 aside { position: fixed; bottom: 0; right: 3%; z-index: 500; margin-bottom: 10%; }
@@ -128,10 +139,14 @@ aside .top_btn::after { content:''; width: 0; height: 0; position: absolute; bot
 
 
 /* media */
+@media ( max-width: 1200px) {
+    .wrap header { width: 90%; }
+}
 @media ( max-width: 992px) {
     .m_bottom { margin-bottom: 5%; }
-    .wrap header { width: 100%; }
-    .wrap header nav { max-width: 60%; }
+    .wrap header { width: 80%; }
+    .wrap header nav { max-width: 500px; }
+    .wrap header h1 { margin-top: 2%;}
     .wrap header .menubar .nav_menu li { font-size: 14px; max-width: 700px; }
     .content .P_Area,.content .B_Area,.content .A_Area  { width: 90%; margin: 5% auto; }
     .content .N_Area .N_contents ul li > p:first-of-type { font-size: 17px; }
@@ -144,10 +159,15 @@ aside .top_btn::after { content:''; width: 0; height: 0; position: absolute; bot
     .wrap header nav { max-width: 66%;}
 }
 @media ( max-width: 768px) { /* 768이하에서는 Mobile_menu */
+    
+    .wrap header h1 img { width: 25%; }
     .wrap header nav { max-width: 95%;}
     .wrap header .menubar label,.wrap header .menubar .nav_menu li i { display: block; z-index: 100; }
     header h1 { text-align: center; }
     header nav { max-width: 95%; }
+    /* header h1 a {
+        margin: 20px auto;
+    } */
     header .menubar .menu-icon {
         padding: 28px 20px;
         position: fixed;

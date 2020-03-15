@@ -1,18 +1,14 @@
 $( document ).ready( function() {
 
-    var menuOffset = $( 'header' ).offset();
+    $(window).scroll(function () {
+        // console.log($(this).scrollTop());
+        if ($(this).scrollTop() >= $('.menubar').height()) {
+            $('header').addClass('nav_fix');
+        } else {
+            $('header').removeClass('nav_fix');
+        }
+    });
 
-    $(function () {
-
-      $(window).scroll(function () {
-          console.log($(this).scrollTop());
-          if ($(this).scrollTop() >= $('header').height()) {
-              $('header .h_wrap').addClass('nav_fix');
-          } else {
-              $('header .h_wrap').removeClass('nav_fix');
-          }
-      });
-  });
 
     $("aside").click(function () {
         $('html').animate({
