@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="css/swiper.min.css">
     <!-- js -->
     <script src="js/swiper.min.js"></script>
-    <script src="script/script.js"></script>
+    <script src="js/script.js"></script>
 
 </head>
 
@@ -56,54 +56,55 @@
                             <li><a href="#">사업분야</a></li>
                             <li><a href="#">리커버샵</a></li>
                             <li><a href="#">맘스육포</a></li>
-                            <li><a href="#">렌탈사업</a></li>
                             <li><a href="#">오시는 길</a></li>
-                            <li><a href="#"><i class="fas fa-map-marker-alt"></i></a></li>
                         </ul>
                         <label class="BG" for="menu-btn"></label>
                     </div>
                 </nav>
             </header>
         </div>
-    <!-- main_slide { -->
-			<div class="main_slide">
-				<div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src = "images/main_banner1.jpg" alt="main banner1"></div>
-                        <div class="swiper-slide"><img src = "images/main_banner2.jpg" alt="main banner2"></div>
-                        <div class="swiper-slide"><img src = "images/main_banner3.jpg" alt="main banner3"></div>
-                    </div>
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
 
-                    <!-- Add Pagination -->
-					<div class="swiper-pagination"></div>
-					
-					<script>
-						var swiper = new Swiper('.swiper-container', {
-							navigation: {
-								nextEl: '.swiper-button-next',
-								prevEl: '.swiper-button-prev',
-							},
-							pagination: {
-								el: '.swiper-pagination',
-							},
-							autoplay: {
-								delay: 3000,
-							},
-							loop: true,
-							autoplayDisableOnInteraction: false,
-							paginationClickable: true
-						});
-					</script>
-				</div>
-			</div>
-            <!-- main_slide { -->
+        <!-- main_slide { -->
+        <div class="main_slide">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src = "images/main_banner1.jpg" alt="main banner1"></div>
+                    <div class="swiper-slide"><img src = "images/main_banner2.jpg" alt="main banner2"></div>
+                    <div class="swiper-slide"><img src = "images/main_banner3.jpg" alt="main banner3"></div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
 
-        <div class="content dw_1200px">
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                
+                <script>
+                    var swiper = new Swiper('.swiper-container', {
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                        pagination: {
+                            el: '.swiper-pagination',
+                        },
+                        autoplay: {
+                            delay: 3000,
+                        },
+                        loop: true,
+                        autoplayDisableOnInteraction: false,
+                        paginationClickable: true,
 
-            <section class="B_Area">
+                    });
+                    swiper.update();
+                </script>
+            </div>
+        </div>
+        <!-- main_slide { -->
+
+        <div class="content">
+
+            <section class="B_Area dw_1200px">
 
                 <div class="B_wrap">
                     <h2>Business</h2>
@@ -115,7 +116,8 @@
 
             </section>
         
-            <section class="P_Area m_bottom m_bottom">
+            <section class="P_Area m_bottom m_bottom dw_1200px">
+                
                 <h2>Product</h2>
                 <div class="P_wrap">
                     <div class="P_mom">
@@ -149,10 +151,9 @@
                         </div>
                     </div>
                 </div>
-
             </section>
 
-            <section class="A_Area">
+            <section class="A_Area dw_1200px">
 
                 <div class="A_top">
                     <img src="images/aboutArea_logo.PNG" alt="aboutArea_logo">
@@ -160,15 +161,15 @@
                     <p>(주)예원 M&amp;D는 다양한 제조 &amp; 유통 사업분야에 진출하여 성장하고 있습니다.</p>
                 </div>
 
-                <div class="col-xs-12 col-sm-6 col-md-3 m_bottom"><img src="images/About_banner1.png" alt="About_banner1"></div>
-                <div class="col-xs-12 col-sm-6 col-md-3 m_bottom"><img src="images/About_banner2.png" alt="About_banner2"></div>
-                <div class="col-xs-12 col-sm-6 col-md-3 m_bottom"><img src="images/About_banner3.png" alt="About_banner3"></div>
-                <div class="col-xs-12 col-sm-6 col-md-3 m_bottom"><img src="images/About_banner4.png" alt="About_banner4"></div>
+                <div class="col-sm-6 col-md-3 m_bottom"><img src="images/About_banner1.png" alt="About_banner1"></div>
+                <div class="col-sm-6 col-md-3 m_bottom"><img src="images/About_banner2.png" alt="About_banner2"></div>
+                <div class="col-sm-6 col-md-3 m_bottom"><img src="images/About_banner3.png" alt="About_banner3"></div>
+                <div class="col-sm-6 col-md-3 m_bottom"><img src="images/About_banner4.png" alt="About_banner4"></div>
 
             </section>
 
             <section class="N_Area">
-                <div class="N_wrap">
+                <div class="N_wrap dw_1200px">
                     <div class="N_contents">
                         <ul>
                             <li>
@@ -179,8 +180,6 @@
                                <div class="go_btn cursor_pointer"><p>바로가기</p></div>
                             </li>
 
-                            <!-- <li><img src="images/notice.png" alt="notice_icon"></li> -->
-
                             <li>
                                 <img src="images/mail.png" alt="mail_icon">
                                 <p>Contact us</p>
@@ -189,8 +188,6 @@
                                 <div class="go_btn cursor_pointer"><p>바로가기</p></div>
                              </li>
 
-                             <!-- <li><img src="images/mail.png" alt="mail_icon"></li> -->
-
                              <li>
                                 <img src="images/map.png" alt="map_icon">
                                 <p>Location</p>
@@ -198,47 +195,44 @@
                                 <p>안내해드립니다.</p>
                                 <div class="go_btn cursor_pointer"><p>바로가기</p></div>
                              </li>      
-
-                             <!-- <li><img src="images/map.png" alt="map_icon"></li> -->
                         </ul>
                     </div>
+
                 </div>
             </section>
         </div>
 
         <footer>
 
-            <div class="ft_wrap dw_1200px">
+            <div class="ft_wrap">
                 <div class="f_top">
                     <ul>
-                        <li>회사소개</li>
-                        <li>서비스이용약관</li>
-                        <li>개인정보처리방침</li>
-                        <li>모바일버전</li>
+                        <li class="col-xs-4">회사소개</li>
+                        <li class="col-xs-4">서비스이용약관</li>
+                        <li class="col-xs-4">개인정보처리방침</li>
                     </ul>
                 </div>
 
                 <div class="f_bottom">
 
-                    <div class="f_logo"><a href="#"><img src="images/logo_img.png" alt="logo_img"></a></div>
-
                     <div class="f_text">
-                        <ul>
-                            <li><strong>회사명</strong>:(주)예원M&amp;D 주소: 경기도 광명시 오리로길 619벌길 11 (하안동 232번지) 예원이케이빌딩</li>
-                            <li><strong>사업자 등록번호</strong>: 835-87-00673<strong>대표</strong>:서제학<strong>전화</strong>: 02-2616-8952 <strong>팩스</strong>:02-897-8952
-                                <strong>개인정보 보호책임자</strong>:김영민
-                            </li>
+                        <div class="f_logo col-xs-12 col-sm-2 col-md-2"><a href="#"><img src="images/logo_img.png" alt="logo_img"></a></div>
+                        
+                        <ul class="col-xs-12 col-sm-7 col-md-7 ft_name">
+                            <li><strong>회사명</strong>:(주)예원M&amp;D <strong>주소 </strong>: 경기도 광명시 오리로길 619벌길 11 (하안동 232번지) 예원이케이빌딩</li>
+                            <li><strong>대표</strong>: 서제학<strong> 사업자 등록번호</strong>: 835-87-00673</li>
+                            <li><strong>전화</strong>: 02-2616-8952 <strong>팩스</strong>: 02-897-8952<strong>개인정보 보호책임자</strong>: 김영민</li>
                             <li>Copyright © 2018 (주)예원M&D. All Rights Reserved.</li>
                         </ul>
-                    </div>
 
-                    <div class="f_customer">
-                        <ul>
+                        <ul class="col-xs-12 col-sm-3 col-md-3">
                             <li>고객센터</li>
                             <li>02-2616-8952</li>
                             <li>월-금 AM 9:00 - PM 18:00</li>
-                            <li>점심시간 PM 12:00 - PM 13:00 / 공휴일,주말 휴무</li>
+                            <li>점심시간 PM 12:00 - PM 13:00</li>
+                            <li>(공휴일,주말 휴무)</li>
                         </ul>
+
                     </div>
 
                 </div>
@@ -252,8 +246,8 @@
             </div>
 
         </aside>
-   
-</div>
+    
+    </div>
 
 </body>
 

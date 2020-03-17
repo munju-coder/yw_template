@@ -1,11 +1,10 @@
 $( document ).ready( function() {
-
+    
     $(window).scroll(function () {
-        // console.log($(this).scrollTop());
-        if ($(this).scrollTop() >= $('.menubar').height()) {
-            $('header').addClass('nav_fix');
+        if ($(this).scrollTop() >= $('.h_wrap').height()) {
+            $('.h_wrap').addClass('nav_fix');
         } else {
-            $('header').removeClass('nav_fix');
+            $('.h_wrap').removeClass('nav_fix');
         }
     });
 
