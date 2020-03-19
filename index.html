@@ -62,7 +62,7 @@
             <div class="header dw_1200px">
                 <h1><a href="index.html"><img src="../yw_template/images/logo_img.png" alt="yw_template logo"></a></h1>
                 <div class="menubar">
-                    <ul class="nav_menu" id = "myTopnav">
+                    <ul class="nav_menu">
                         <li><a href="content/content.html">회사소개</a></li>
                         <li><a href="content/content.html">사업분야</a></li>
                         <li><a href="content/recovershop.html">리커버샵</a></li>
@@ -76,7 +76,8 @@
                     .h_wrap .header { height: 90px; min-width: 70px; }
                     .h_wrap .header h1 { text-align: left; }
                     .h_wrap .header h1 a { position: relative; }
-                    .h_wrap .header .menubar .nav_menu { position: absolute; top: 50px; right: 0; width:48%; }
+                    .h_wrap .header h1 a img { width: 140px; margin-top: 16px; }
+                    .h_wrap .header .menubar .nav_menu { position: absolute; top: 57px; right: 0; width: 100%; max-width: 50%; }
                     .h_wrap .header .menubar .nav_menu li { float: left; margin-left: 50px; }
                     .h_wrap .header .menubar .nav_menu::after { content: ' '; display: block; overflow: hidden; clear: both; }
                     .h_wrap .header .menubar:last-child a { display: none; }
@@ -84,18 +85,22 @@
                     .active1 {display: block;}
 
 
-
+                    /* @media (max-width: 1120px) {
+                        .h_wrap .header h1 { width: 90%; max-width: 1200px; margin: 0 auto; }
+                        .h_wrap .header .menubar .nav_menu { max-width: 54%; }
+                    } */
                     @media ( max-width: 768px) {
                         .M_navWrap { display: block; }
                         .menu_icon  { display: block; position: absolute; right: 30px; top: 36px; font-size: 30px;}
                         .menu_icon i { color: orange; }
                         .h_wrap .header .menubar .nav_menu { display: none; }
-                        .h_wrap .header .menubar .nav_menu.active1 {
+                        .h_wrap .header .menubar .nav_menu.active {
                              background-color: #ffffff; 
                              display: block;
 
                         }
-                        .h_wrap .header .menubar .nav_menu li.active2 { float: none; display: block; }
+                        .h_wrap .header .menubar .nav_menu li.active { float: none; display: block; }
+                        .h_wrap .header h1 { text-align: center; }
 
                     }
 

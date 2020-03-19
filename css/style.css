@@ -21,7 +21,7 @@ border-right: 10px solid transparent; border-left: 10px solid transparent; borde
 /* B_Area */
 .wrap .content { position: relative; width:100%; overflow:hidden;}
 .content .B_Area { margin-bottom: 5%; margin-top: 5%; }
-.content .B_Area .B_wrap ul li { float: left; width:47%; position: relative; overflow: hidden; display: inline-block; }
+.content .B_Area .B_wrap ul li { float: left; width:47%; position: relative; overflow: hidden; }
 .content .B_Area .B_wrap ul li:first-child { margin-right: 6%; }
 .content .B_Area .B_wrap ul li img::after {
     position: absolute;

@@ -32,13 +32,13 @@ $( document ).ready( function() {
     $('.fa-bars').click( function(){
         if(a%2 == 0)
         {
-            $('.nav_menu').addClass('active1');
-            $('.nav_menu li').addClass('active2');
+            $('.nav_menu').addClass('active');
+            $('.nav_menu li').addClass('active');
         }
         else
         {
-            $('.nav_menu').removeClass('active1');
-            $('.nav_menu li').removeClass('active2');
+            $('.nav_menu').removeClass('active');
+            $('.nav_menu li').removeClass('active');
         }
         a++;
     }); 
