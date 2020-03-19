@@ -8,7 +8,6 @@ $( document ).ready( function() {
         }
     });
 
-
     $("aside").click(function () {
         $('html').animate({
             scrollTop: 0
@@ -22,12 +21,27 @@ $( document ).ready( function() {
         
 
     });  
+
     $(".modal_box .modal_content i").click( function(){
         $(".modal_background").toggle();
         $(".modal_box").toggle().load("./modal/contact_us.html");
         
     });
-
+    
+    var a = 0;
+    $('.fa-bars').click( function(){
+        if(a%2 == 0)
+        {
+            $('.nav_menu').addClass('active1');
+            $('.nav_menu li').addClass('active2');
+        }
+        else
+        {
+            $('.nav_menu').removeClass('active1');
+            $('.nav_menu li').removeClass('active2');
+        }
+        a++;
+    }); 
 
     
   });

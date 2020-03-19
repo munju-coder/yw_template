@@ -57,20 +57,49 @@
             </div>
         </div> 
         <!-- } modal -->
-        
+        <!--nav bar-->
         <div class="h_wrap">
-            <header>
+            <div class="header dw_1200px">
                 <h1><a href="index.html"><img src="../yw_template/images/logo_img.png" alt="yw_template logo"></a></h1>
-                <nav>
-                    <ul class="nav_menu">
+                <div class="menubar">
+                    <ul class="nav_menu" id = "myTopnav">
                         <li><a href="content/content.html">회사소개</a></li>
                         <li><a href="content/content.html">사업분야</a></li>
                         <li><a href="content/recovershop.html">리커버샵</a></li>
                         <li><a href="content/moms.html">맘스육포</a></li>
                         <li><a href="content/map.html">오시는 길</a></li>
                     </ul>
-                </nav>
-                
+                    <a class="menu_icon" href="#"><i class="fa fa-bars"></i></a>
+                </div>
+
+                <style>
+                    .h_wrap .header { height: 90px; min-width: 70px; }
+                    .h_wrap .header h1 { text-align: left; }
+                    .h_wrap .header h1 a { position: relative; }
+                    .h_wrap .header .menubar .nav_menu { position: absolute; top: 50px; right: 0; width:48%; }
+                    .h_wrap .header .menubar .nav_menu li { float: left; margin-left: 50px; }
+                    .h_wrap .header .menubar .nav_menu::after { content: ' '; display: block; overflow: hidden; clear: both; }
+                    .h_wrap .header .menubar:last-child a { display: none; }
+                    .menu_icon  { display: none; }
+                    .active1 {display: block;}
+
+
+
+                    @media ( max-width: 768px) {
+                        .M_navWrap { display: block; }
+                        .menu_icon  { display: block; position: absolute; right: 30px; top: 36px; font-size: 30px;}
+                        .menu_icon i { color: orange; }
+                        .h_wrap .header .menubar .nav_menu { display: none; }
+                        .h_wrap .header .menubar .nav_menu.active1 {
+                             background-color: #ffffff; 
+                             display: block;
+
+                        }
+                        .h_wrap .header .menubar .nav_menu li.active2 { float: none; display: block; }
+
+                    }
+
+                </style>
                 <!-- <nav>
                     <div class="menubar">
                         <input class="menu-btn" type="checkbox" id="menu-btn">
@@ -88,8 +117,21 @@
                         <label class="BG" for="menu-btn"></label>
                     </div>
                 </nav> -->
-            </header>
+            </div>
         </div>
+
+        <!--nav bar mmobile-->
+        <!-- <div class="M_navWrap"> 
+            <div class="M_menubar">
+                <ul class="M_nav_menu">
+                    <li><a href="content/content.html">회사소개</a></li>
+                    <li><a href="content/content.html">사업분야</a></li>
+                    <li><a href="content/recovershop.html">리커버샵</a></li>
+                    <li><a href="content/moms.html">맘스육포</a></li>
+                    <li><a href="content/map.html">오시는 길</a></li>
+                </ul>
+            </div>
+        </div> -->
 
         <!-- main_slide { -->
         <div class="main_slide">
