@@ -6,10 +6,10 @@
 .wrap header h1 { width: 100%; margin: 0 auto; margin-top: 1%; margin-bottom: 1%; max-width: 1200px; }
 .wrap header h1 img { width: 14%; }
 .wrap header nav { position: absolute; right: 2%; top: 60%; }   
-.wrap header .menubar .nav_menu li { float: left; margin-right: 30px; font-size: 18px; }
+/* .wrap header .menubar .nav_menu li { float: left; margin-right: 30px; font-size: 18px; }
 .wrap header .menubar .nav_menu li a:hover { color:#ff8d3c; }
 .wrap header .menubar .nav_menu::after { content: ''; overflow: hidden; clear: both; display: block; }
-.wrap header .menubar > label, header .menubar > input ,header .menubar .nav_menu li i { display: none; }
+.wrap header .menubar > label, header .menubar > input ,header .menubar .nav_menu li i { display: none; } */
 
 /* aside */
 aside { position: fixed; bottom: 22%; right: 3%; z-index: 500; }
@@ -163,9 +163,49 @@ margin-right: 5px;
 .cm_bottom .pg_page { background:#e4eaec;text-decoration:none}
 .cm_bottom .pg_current { display:inline-block;/* margin:0 4px 0 0; */background:#333; color:#fff; font-weight:normal;}	
 .cm_bottom .total_count { font-size:20px;font-weight:bold;padding:5px 5px;float:right;}
-/* page */
 
+/*notice_view.html style*/
+.content .cmt_top { margin-top: 2%; }
+.content .cmt_top h2 { font-size: 20px; font-weight: 600; text-align: left; margin: 2% 0; }
+.content .cmt_top h2 strong { font-weight: 900; color: #000; }
 
+.content .cmt_top .cmt_middle { margin-bottom: 5%; border-bottom: 1px solid #ddd; }
+.content .cmt_top .cmt_middle div:first-child { float: left; margin-bottom: 2%; font-weight: 600; }
+.content .cmt_top .cmt_middle div:first-child strong { font-size: 13px; color: #000; }
+.content .cmt_top .cmt_middle::after { content: ''; display: block; overflow: hidden; clear: both; }
+.content .cmt_top .cmt_middle div:last-child
+{ float: right; color: #888; font-size: 13px; font-weight: initial; font-style: italic; margin-right: 10px; }
+
+.content .cmt_bottom { text-align: left; margin-bottom: 10%; }
+.content .cmt_bottom p { font-size: 13px; }
+.content .cmt_bottom p:first-child { margin-bottom: 10px; }
+
+.content .cmt_btn { background-color: #4c4f6f; padding: 10px; border-radius: 5px; float: right; margin-bottom: 5%; }
+.content .cmt_btn a { color: white; font-size: 12px; }
+.content .cmt_btn a i { font-size: 10px; margin-right: 3px; }
+
+/* modal */
+.modal_background { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,.3); z-index: 10; }
+.modal_box { display: none; position: fixed; background: #fff; z-index: 11; width: 500px; height: 500px; top: 20%; left:37%;  }    
+.modal_content { text-align: center; }
+.modal_content img { margin: 5% 0; position: relative; }
+.modal_content i { font-size: 30px; color: orange; position: absolute; top: 5%; right: 5%; }
+.modal_content form input { border-radius: 10px; border: 1.5px solid #898989; }
+.modal_content form input:first-child,.modal_content form input:nth-child(2) { padding: 10px; }
+.modal_content form input:nth-child(2) { margin-top: 3%; }
+.modal_content form input:nth-child(3) { padding: 77px 10px;  margin-top: 3%; }
+.modal_content form input:nth-child(3) { padding-top: 6px; padding-bottom: 160px; padding-left: 6px; }
+.modal_content form input:last-child{ 
+    background-color: orange; 
+    display: inline-block; 
+    margin-top: 3%; 
+    color: #ffffff; 
+    width: 100px; 
+    padding: 10px; 
+    border-radius: 20px;
+    border: 1px solid orange;
+
+ }
 
 /* media */
 @media ( max-width: 1200px) {
@@ -200,6 +240,9 @@ margin-right: 5px;
     .ft_wrap .f_bottom .f_text ul:last-child li:first-child { font-size: 14px; }
     .ft_wrap .f_bottom .f_text ul:last-child { font-size: 13px; }
 
+    .modal_box { left: 25%; }
+    
+
 }
 @media ( max-width: 800px) {
     .content .c_menu ul li { font-size: 13px; }
@@ -211,10 +254,10 @@ margin-right: 5px;
     .wrap header { min-height: 75px; }
     .wrap header h1 img { width: 150px; }
     .wrap header nav { max-width: 95%;}
-    .wrap header .menubar label,.wrap header .menubar .nav_menu li i { display: block; z-index: 100; }
+    .wrap header .menubar label{ display: block; z-index: 100; }
     header h1 { text-align: center; }
     header nav { max-width: 95%; }
-    header .menubar .menu-icon {
+    /* header .menubar .menu-icon {
         padding: 28px 20px;
         position: fixed;
         top: 13px;
@@ -259,7 +302,7 @@ margin-right: 5px;
     header .menubar .menu-btn:checked + label { z-index: 301; left: 145px; }
     header .menubar .menu-btn:checked + label + .nav_menu { left: 0; padding-left: 4%; padding-top: 10%; box-sizing: border-box; }
     header .menubar .menu-btn:checked + label + .nav_menu > li { margin: 20px; }
-    header .menubar .menu-btn:checked ~ .BG { position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(22, 22, 22, 0.81); }
+    header .menubar .menu-btn:checked ~ .BG { position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(22, 22, 22, 0.81); } */
 
     .content .B_Area .B_wrap ul { width: 90%; margin: 0 auto; }
     .content .N_Area { padding: 2%; }
@@ -300,14 +343,32 @@ margin-right: 5px;
     table { font-size: 12px; }
     #bo_list_total { font-size: 12px; }
     table .td2_none { width: 20%; }
+
+    .modal_box { left: 0; width: 100%; height: 70%; }
+    .modal_content form input { width: 460px; }
+    .modal_content form input:nth-child(1),.modal_content form input:nth-child(2) { padding: 10px; }
+    
+    .modal_content form input:last-child { width: 77px; padding: 14px; font-size: 14px;}
+    .modal_content form input::placeholder { font-size: 12px; }
+    .modal_content img { margin: 3% 0; }
+
+
  
 }
 
 @media ( max-width: 600px) {
     .swiper-container .swiper-button-prev::after,.swiper-container > .swiper-button-next::after  { font-size: 50px; }
     .content .c_top h2 { font-size: 16px; }
-
     .td_none { display: none; }
+    .content .cmt_top h2 { font-size: 16px; margin: 5% 0; }
+    .content .cmt_top .cmt_middle div:last-child { font-size: 10px; }
+    .content .cmt_top .cmt_middle div:first-child strong { font-size: 11px; }
+    .content .cmt_bottom p { font-size: 12px; }
+    .content .cmt_btn { line-height: 5px; padding: 6px; }
+    .content .cmt_btn a { font-size: 10px; }
+
+
+
 }
 
 @media ( max-width: 500px) { 
@@ -332,6 +393,10 @@ margin-right: 5px;
     #bo_sch { width:90%; max-width: 1200px; margin: 0 auto; }
     #bo_sch .sch_input { width: 65%; }
     
+    .modal_content form input { width:270px; }
+    .modal_content img { width: 135px; }
+    .modal_box { height: 460px; }
+    .modal_content form input:last-child { width: 70px; font-size: 12px;  padding: 10px; }
 
     
     
@@ -343,6 +408,7 @@ margin-right: 5px;
     .wrap header h1 { margin-top: 0; }
 
     table td { text-align: left; }
+    .modal_box { height: 435px; }
     
 
 }

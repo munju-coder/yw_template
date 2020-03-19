@@ -41,13 +41,40 @@
 
 <body>
     <div class="wrap">
+        <!-- modal { -->
+		<div class = "modal_background"></div>
+        <div class = "modal_box">
+            <div class="modal_content">
+                <img src="images/logo_img.png" alt="logo_img">
+                <i class="far fa-times-circle"></i>
+                <form action="">
+                    <input type="text" placeholder="name">
+                    <input type="text" placeholder="email">
+                    <input type="text" placeholder="문의하기"><br />
+                    <input type="button" value="보내기">
+                </form>
+
+            </div>
+        </div> 
+        <!-- } modal -->
+        
         <div class="h_wrap">
             <header>
                 <h1><a href="index.html"><img src="../yw_template/images/logo_img.png" alt="yw_template logo"></a></h1>
                 <nav>
+                    <ul class="nav_menu">
+                        <li><a href="content/content.html">회사소개</a></li>
+                        <li><a href="content/content.html">사업분야</a></li>
+                        <li><a href="content/recovershop.html">리커버샵</a></li>
+                        <li><a href="content/moms.html">맘스육포</a></li>
+                        <li><a href="content/map.html">오시는 길</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- <nav>
                     <div class="menubar">
                         <input class="menu-btn" type="checkbox" id="menu-btn">
-                        <label class="menu-icon" for="menu-btn">
+                        <label class="menu-icon ham_btn" for="menu-btn">
                             <span class="nav-icon"></span>
                         </label>
 
@@ -60,7 +87,7 @@
                         </ul>
                         <label class="BG" for="menu-btn"></label>
                     </div>
-                </nav>
+                </nav> -->
             </header>
         </div>
 
@@ -185,7 +212,7 @@
                                 <p>Contact us</p>
                                 <p>(주)예원 M&amp;D에 문의사항을 남겨주시면</p>
                                 <p>메일로 답변드립니다.</p>
-                                <div class="go_btn cursor_pointer"><p>바로가기</p></div>
+                                <div class="go_btn contact_us_btn cursor_pointer"><p>문의하기</p></div>
                              </li>
 
                              <li>

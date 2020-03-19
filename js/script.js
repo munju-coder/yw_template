@@ -14,5 +14,20 @@ $( document ).ready( function() {
             scrollTop: 0
         }, 500);
     });
+
+    //modal
+	$(".contact_us_btn").click(function(){        
+        $(".modal_background").toggle();
+        $(".modal_box").toggle().load("./modal/contact_us.html");
+        
+
+    });  
+    $(".modal_box .modal_content i").click( function(){
+        $(".modal_background").toggle();
+        $(".modal_box").toggle().load("./modal/contact_us.html");
+        
+    });
+
+
     
   });
