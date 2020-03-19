@@ -33,12 +33,12 @@ $( document ).ready( function() {
         if(a%2 == 0)
         {
             $('.nav_menu').addClass('active');
-            $('.nav_menu li').addClass('active');
+            $('.nav_menu a').addClass('active');
         }
         else
         {
             $('.nav_menu').removeClass('active');
-            $('.nav_menu li').removeClass('active');
+            $('.nav_menu a').removeClass('active');
         }
         a++;
     }); 
