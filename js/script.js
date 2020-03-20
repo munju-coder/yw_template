@@ -42,6 +42,19 @@ $( document ).ready( function() {
         }
         a++;
     }); 
+    $( window ).resize(function() {
+        //console.log($( window ).width());
+        var width = $( window ).width();
+    
+        if(width > 768)
+        {
+            $(".nav_menu a").removeClass("active");
+        }
+        else
+        {
+            $(".nav_menu a").addClass("active");
+        }
+    });    
 
     
   });

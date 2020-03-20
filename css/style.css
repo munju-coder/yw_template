@@ -6,10 +6,16 @@
 .wrap header h1 { width: 100%; margin: 0 auto; margin-top: 1%; margin-bottom: 1%; max-width: 1200px; }
 .wrap header h1 img { width: 14%; }
 .wrap header nav { position: absolute; right: 2%; top: 60%; }   
-/* .wrap header .menubar .nav_menu li { float: left; margin-right: 30px; font-size: 18px; }
-.wrap header .menubar .nav_menu li a:hover { color:#ff8d3c; }
-.wrap header .menubar .nav_menu::after { content: ''; overflow: hidden; clear: both; display: block; }
-.wrap header .menubar > label, header .menubar > input ,header .menubar .nav_menu li i { display: none; } */
+.h_wrap .header { height: 100px; min-width: 70px; width:1200px; margin: 0 auto; }
+.h_wrap .header h1 { text-align: left; }
+.h_wrap .header h1 a img { width: 150px; margin-top: 18px; }
+.h_wrap .header .menubar { margin-top: -2%; }
+.h_wrap .header .menubar .nav_menu { text-align: right; }
+.h_wrap .header .menubar .nav_menu a
+{ color: #000; transition: color 0.3s ease; margin-right: 30px; font-size: 18px; }
+.h_wrap .header .menubar .nav_menu a:hover { color: orange; }
+.menu_icon  { display: none; }
+.active { display: block; }
 
 /* aside */
 aside { position: fixed; bottom: 22%; right: 3%; z-index: 500; }
@@ -211,15 +217,17 @@ margin-right: 5px;
 @media ( max-width: 1200px) {
     .wrap header h1 { width: 90%; }
     .wrap .content .B_Area,.wrap .content .P_Area { width: 95%; margin: 0 auto; }
+    .h_wrap .header { width: 100%; height: 95px; }
+    .h_wrap .header .menubar .nav_menu a { font-size: 16px; }
+    .h_wrap .header .menubar { margin-top: -3%; }
     .A_top { margin-top: 5%; }
-
     .wrap .notice_wrap { width: 95%; }
     table th { text-align: center; }
     table td {padding: 3px; text-align: center; }
     .txt_c { padding: 1% 0;}
     .wrap .c_middle .cm_top ul li { font-size: 18px; }
     table { font-size: 14px;  }
-  
+
 
 }
 @media ( max-width: 992px) {
@@ -257,53 +265,25 @@ margin-right: 5px;
     .wrap header .menubar label{ display: block; z-index: 100; }
     header h1 { text-align: center; }
     header nav { max-width: 95%; }
-    /* header .menubar .menu-icon {
-        padding: 28px 20px;
-        position: fixed;
-        top: 13px;
-        left: 0;
-        cursor: pointer;
-        transition: all .35s;
+    
+    .menu_icon  { display: block; position: absolute; right: 30px; top: 36px; font-size: 30px;}
+    .menu_icon i { color: orange; }
+    .h_wrap .header .menubar .nav_menu { display: none; }
+    .h_wrap .header .menubar .nav_menu.active {
+         background-color: #ff8d3c;
+         display: block;
+         text-align: center;
+         position: absolute;
+         top: 94px;
+         width: 100%;
+         z-index: 2;
     }
-    header .menubar .menu-icon .nav-icon { background:rgb(243, 152, 0); display: block; height: 4.5px; width: 30px; position: relative; z-index: 400; }
-    header .menubar .menu-icon .nav-icon:before {
-        background: rgb(243, 152, 0);
-        content: " ";
-        display: block;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 10px;
-    }
-
-    header .menubar .menu-icon .nav-icon:after {
-        background: rgb(243, 152, 0);
-        content: " ";
-        display: block;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: -10px;
-    }
-    header .menubar .nav_menu li i { display: block; }
-    header .menubar .menu-btn { display: none; }
-    header .menubar .menu-btn:checked ~ .menu-icon .nav-icon { background: transparent; }
-    header .menubar .menu-btn:checked ~ .menu-icon .nav-icon:before { transform: rotate(-45deg); top: 0; left: 40px; }
-    header .menubar .menu-btn:checked ~ .menu-icon .nav-icon:after { transform: rotate(45deg); top: 0; left: 40px; }
-    header nav .menubar .nav_menu {
-        width: 200px;
-        height: 100%;
-        background-color: white;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        z-index: 300;
-    }
-    header .menubar .menu-btn:checked + label { z-index: 301; left: 145px; }
-    header .menubar .menu-btn:checked + label + .nav_menu { left: 0; padding-left: 4%; padding-top: 10%; box-sizing: border-box; }
-    header .menubar .menu-btn:checked + label + .nav_menu > li { margin: 20px; }
-    header .menubar .menu-btn:checked ~ .BG { position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(22, 22, 22, 0.81); } */
-
+    .h_wrap .header .menubar .nav_menu.active a:hover { color: white; } 
+    .h_wrap .header .menubar .nav_menu a.active 
+    { font-size: 18px; margin-bottom: 35px; border-bottom: 1px solid #ddd; padding-bottom: 30px; width:100%; }
+    .h_wrap .header .menubar .nav_menu a:first-child.active { margin-top: 35px; }
+    .h_wrap .header .menubar .nav_menu a:last-child.active { border-bottom: none; padding-bottom: 0; }
+    .h_wrap .header h1 { text-align: center; }
     .content .B_Area .B_wrap ul { width: 90%; margin: 0 auto; }
     .content .N_Area { padding: 2%; }
     section h2 { font-size: 24px; }
@@ -374,6 +354,9 @@ margin-right: 5px;
 @media ( max-width: 500px) { 
 
     header h1 img { width: 30%; }
+    .h_wrap .header .menubar .nav_menu a:first-child.active { margin-top: 20px; }
+    .h_wrap .header .menubar .nav_menu a.active { padding-bottom:20px; margin-bottom:20px; }
+    .h_wrap .header .menubar .nav_menu a.active { font-size: 15px; }
     section h2 { font-size: 16px; margin: 7% 0; }
     .content .A_Area { margin: 7% auto; }
     .content .A_Area .A_top { width: 80%; }
